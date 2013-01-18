@@ -52,7 +52,7 @@ public class Commands implements CommandExecutor {
 				}
 				if (args.length == 2) {
 					if (args[0].equals("delete")) {
-						if (player.hasPermission("playervault.delete")) {
+						if (player.hasPermission("playervaults.delete")) {
 							if (args[1].matches("[1-9]")) {
 								plugin.deletePlayerVault(args[1], player);
 								player.sendMessage(pv+" successfully deleted your vault")
