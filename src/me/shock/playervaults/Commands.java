@@ -55,6 +55,7 @@ public class Commands implements CommandExecutor {
 						if (player.hasPermission("playervault.delete")) {
 							if (args[1].matches("[1-9]")) {
 								plugin.deletePlayerVault(args[1], player);
+								player.sendMessage(pv+" successfully deleted your vault")
 								return true;
 							}
 						}
@@ -72,6 +73,7 @@ public class Commands implements CommandExecutor {
 							}
 							if (args[2].matches("[1-9]")) {
 								plugin.deletePlayerVault(args[2], target);
+								player.sendMessage(pv+" successfully deleted "+ args[1] + " vault");
 								return true;
 							}
 						}
