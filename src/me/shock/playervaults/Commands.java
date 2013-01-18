@@ -1,4 +1,4 @@
-package me.ceramictitan.playervaults;
+package me.shock.playervaults;
 
 import me.shock.playervaults.Main;
 
