@@ -6,7 +6,12 @@ commands:
   vault:
     description: Open a vault with /vault <number>
     aliases: [pv, playervault, playervaults]
+  vault delete:
+    description: Deletes vaults
+    aliases: [pv delete, playervault delete, playervaults delete]
 permissions:
+  playervaults.admin:
+    default: op
   playervaults.amount.1:
     default: no
   playervaults.amount.2:
