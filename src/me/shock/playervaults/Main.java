@@ -7,8 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import me.ceramictitan.playervaults.Commands;
-import me.ceramictitan.playervaults.Listeners;
+import me.shock.playervaults.Commands;
+import me.shock.playervaults.Listeners;
 
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
