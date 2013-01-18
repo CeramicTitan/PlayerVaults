@@ -44,31 +44,31 @@ public class Main extends JavaPlugin
 	 */
 	public void loadVaults()
 	{
-		this.datafolder = getDataFolder();
-	    this.datafile = new File(this.datafolder, "vaults.yml");
-	    this.vaults = new YamlConfiguration();
+		datafolder = getDataFolder();
+	    datafile = new File(this.datafolder, "vaults.yml");
+	    vaults = new YamlConfiguration();
 
-	    if (!this.datafolder.exists()) {
+	    if (!datafolder.exists()) {
 	      try {
 	        getServer().getLogger().info("[PlayerVaults] Creating vaults.yml");
-	        this.datafolder.mkdir();
-	        this.datafile.createNewFile();
+	        datafolder.mkdir();
+	        datafile.createNewFile();
 	      }
 	      catch (Exception e) {
 	        getServer().getLogger().severe("[PlayerVaults] Could not create vaults.yml: " + e);
 	      }
 	    }
-	    else if (!this.datafile.exists())
+	    else if (!datafile.exists())
 	      try {
 	        getServer().getLogger().info("[PlayerVaults] Creating vaults.yml");
-	        this.datafile.createNewFile();
+	        datafile.createNewFile();
 	      }
 	      catch (Exception e) {
 	        getServer().getLogger().severe("[PlayerVaults] Could not create vaults.yml: " + e);
 	      }
 	    try
 	    {
-	      this.vaults.load(this.datafile);
+	      vaults.load(datafile);
 	    }
 	    catch (Exception e) {
 	      getServer().getLogger().severe("[PlayerVaults] Could not load vaults.yml: " + e);
@@ -80,7 +80,7 @@ public class Main extends JavaPlugin
 	public void saveData()
 	{
 		try {
-			vaults.save(this.datafile);
+			vaults.save(datafile);
 		} catch (IOException e) {
 			getServer().getLogger().severe("[PlayerVaults] Couldn't save vaults.yml: " + e);
 		}
