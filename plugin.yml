@@ -1,0 +1,43 @@
+name: PlayerVaults
+main: me.shock.playervaults.Main
+author: drtshock
+version: 0.1
+commands:
+  vault:
+    description: Open a vault with /vault <number>
+    aliases: [pv, playervault, playervaults]
+permissions:
+  playervaults.amount.1:
+    default: no
+  playervaults.amount.2:
+    default: no
+    children:
+      playervaults.amount.1: true
+  playervaults.amount.3:
+    default: no
+    children:
+      playervaults.amount.2: true
+playervaults.amount.4:
+    default: no
+    children:
+      playervaults.amount.3: true
+playervaults.amount.5:
+    default: no
+    children:
+      playervaults.amount.4: true
+playervaults.amount.6:
+    default: no
+    children:
+      playervaults.amount.5: true
+playervaults.amount.7:
+    default: no
+    children:
+      playervaults.amount.6: true
+playervaults.amount.8:
+    default: no
+    children:
+      playervaults.amount.7: true
+playervaults.amount.9:
+    default: op
+    children:
+      playervaults.amount.8: true
